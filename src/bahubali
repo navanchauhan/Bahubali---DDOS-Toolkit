@@ -27,10 +27,10 @@ clear
 function menu() {
 echo "Victim's URL is $url"
 echo "Choose any option"
-echo "(1) Hulk"
+echo "(1) Tool 1"
 echo "(2) Slow Post DoS"
-echo "(3) SlowORis"
-echo "(4) GoldenEye"
+echo "(3) Tool 3"
+echo "(4) Under Development"
 echo "(5) About Bahubali"
 echo "(6) Exit"
 read -p "Enter the option number : " option
