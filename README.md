@@ -1,37 +1,33 @@
 # Bahubali---DDOS-Toolkit
 
+![Version](https://img.shields.io/github/release/navanchauhan/Bahubali---DDOS-Toolkit.svg)
+[![License](https://img.shields.io/github/license/navanchauhan/Bahubali---DDOS-Toolkit.svg)]()
+![Issues](https://img.shields.io/github/issues/navanchauhan/Bahubali---DDOS-Toolkit.svg)
+
 It is a DDoS toolkit
 
 # Setup
 
-Option 1 :
-Clone this repo : 
+## Method 1 :
 
-git clone https://github.com/N3V0N/Bahubali---DDOS-Toolkit/ 
+#### Clone this repo : 
 
+`git clone https://github.com/N3V0N/Bahubali---DDOS-Toolkit`
 
-cd src
+`cd src`
 
-
-bash bahubali
+`bash bahubali`
                   
-Option 2 :
-Installing via .deb : https://github.com/N3V0N/Bahubali---DDOS-Toolkit/releases
+## Method 2 :
+
+#### Installing via .deb : 
+
+Goto : https://github.com/N3V0N/Bahubali---DDOS-Toolkit/releases
 
 Choose the release
 
-
 Install it
 
-
-type bahubali anywhere
+Type `bahubali` anywhere
                       
-# Special Mention :
-The Creators of :  
-
-HULK
-
-Slowloris
-
-Tor's Hammer
-                 
+       
